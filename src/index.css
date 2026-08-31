@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Nunito', system-ui, sans-serif;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+
+  --color-background: #FBF8F2;
+  --color-foreground: #1A1D1F;
+  --color-brand: #2F9E44;
+  --color-brand-foreground: #FFFFFF;
+  --color-brand-deep: #0F3D2E;
+  --color-brand-deep-foreground: #FFFFFF;
+  --color-cta: #2563EB;
+  --color-cta-foreground: #FFFFFF;
+  --color-gold: #D4A017;
+  --color-gold-foreground: #1A1D1F;
+  --color-urgency: #DC2626;
+  --color-urgency-foreground: #FFFFFF;
+  --color-card: #FFFFFF;
+  --color-border: #E7E3DA;
+  --color-muted-foreground: #6B7280;
+}
+
+:root {
+  --background: #FBF8F2;
+  --foreground: #1A1D1F;
+  --brand: #2F9E44;
+  --brand-deep: #0F3D2E;
+  --cta: #2563EB;
+  --gold: #D4A017;
+  --urgency: #DC2626;
+  --card: #FFFFFF;
+  --border: #E7E3DA;
+  --muted-foreground: #6B7280;
+}
+
+.font-display {
+  font-family: 'Nunito', system-ui, -apple-system, sans-serif;
+}
+
+.font-sans {
+  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+}
+
+@keyframes glowBlue {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.35), 0 4px 20px rgba(37, 99, 235, 0.2);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(37, 99, 235, 0.65), 0 6px 28px rgba(37, 99, 235, 0.35);
+    transform: scale(1.015);
+  }
+}
+
+@keyframes glowGold {
+  0%, 100% {
+    box-shadow: 0 0 16px rgba(212, 160, 23, 0.4), 0 4px 20px rgba(212, 160, 23, 0.25);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 32px rgba(212, 160, 23, 0.75), 0 6px 30px rgba(212, 160, 23, 0.4);
+    transform: scale(1.015);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-glow-blue {
+  animation: glowBlue 2.4s ease-in-out infinite;
+}
+
+.animate-glow-gold {
+  animation: glowGold 2.2s ease-in-out infinite;
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FBF8F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4A017;
+  border-radius: 4px;
+}
